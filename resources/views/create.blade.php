@@ -32,3 +32,15 @@
       @endforeach
     </select>
 @endif
+
+{{-- Create a radio input field. If the active value is provided active value has to be selected --}}
+@if ($data['type'] == 'radio')
+    @foreach ($data['values'] as $key => $val)
+        <input
+        type="radio"
+        name="{{ $data['name'] }}"
+        value="{{ $val }}"
+        {{ $data['active'] == $key ? 'checked' : '' }}
+        >
+    @endforeach
+@endif
