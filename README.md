@@ -77,7 +77,7 @@ Route::get('/form-builder-text', function () {
   $data = [
     'ids' => ['id1'],
     'classes' => ['class1', 'class2'],
-    'type' => 'select',
+    'type' => 'radio',
     'name' => 'name',
     'values' => [
       'value1' => 'value1_name',
@@ -105,7 +105,7 @@ Route::get('/form-builder-text', function () {
   $data = [
     'ids' => ['id1'],
     'classes' => ['class1', 'class2'],
-    'type' => 'select',
+    'type' => 'checkbox',
     'name' => 'name',
     'values' => [
       'value1' => 'value1_name',
