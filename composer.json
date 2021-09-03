@@ -1,0 +1,23 @@
+{
+    "name": "jfbiswajit/pixie_form_builder",
+    "description": "Laravel Test Package",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JfBiswajit\\PixieFormBuilder\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JfBiswajit\\PixieFormBuilder\\Providers\\PixieFormBuilderServiceProvider"
+            ]
+        }
+    }
+}
