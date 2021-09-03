@@ -44,3 +44,14 @@
         >
     @endforeach
 @endif
+
+{{-- Create a checkbox input type. If the active value is provided active value has to be selected --}}
+@if ($data['type'] == 'checkbox')
+    @foreach ($data['values'] as $key => $val)
+        <input
+        type="checkbox"
+        name="{{ $key }}"
+        {{ $data['active'] == $key ? 'checked' : '' }}
+        >
+    @endforeach
+@endif
