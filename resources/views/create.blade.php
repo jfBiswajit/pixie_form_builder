@@ -11,3 +11,11 @@
     {{ $class }}
     @endforeach"
 @endisset>
+
+{{-- If the type input key value is text then create a text input field and show the existing value --}}
+@if ($data['type'] == 'text')
+    <input type="text" placeholder="Start typing here"
+    name="{{ $data['name'] }}"
+    value="{{ $data['values']['prev_value'] ?? '' }}"
+    {{ $data['required'] ? 'required' : '' }}>
+@endif
