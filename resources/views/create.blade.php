@@ -19,3 +19,16 @@
     value="{{ $data['values']['prev_value'] ?? '' }}"
     {{ $data['required'] ? 'required' : '' }}>
 @endif
+
+{{-- Create a select input field and show all provided options. And make option selected for active value  --}}
+@if ($data['type'] == 'select')
+    <select
+    name="{{ $data['name'] }}"
+    {{ $data['required'] ? 'required' : '' }}>
+      
+      <option value="" selected disabled> Please select one </option>
+      @foreach ($data['values'] as $key => $val)
+          <option {{ $data['active'] == $key ? 'selected' : '' }} value="{{ $key }}"> {{ $val }} </option>
+      @endforeach
+    </select>
+@endif
